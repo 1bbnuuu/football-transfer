@@ -105,7 +105,7 @@ async function fetchTransfers(teamId) {
         <div class="github-card rounded-lg p-6 text-center">
         <i class="fas fa-exclamation-triangle text-2xl text-red-400 mb-3"></i>
         <p class="text-red-400 font-medium">Failed to load transfers</p>
-        <p class="text-muted text-sm mt-1">Check your API key and connection</p>
+        <p class="text-muted text-sm mt-1">API token has expired for today try tomorrow</p>
         </div>
     `;
     console.error(error);
