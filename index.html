@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>20 Europeans Football Teams Transfer</title>
+</head>
+<body class="min-h-screen">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="github-card rounded-lg p-4">
+            <div class="flex items-center justify-between">
+            <div>
+                <p class="text-sm text-muted">Total Transfers</p>
+                <p id="totalTransfers" class="text-2xl font-semibold">0</p>
+            </div>
+            <i class="fas fa-exchange-alt text-muted"></i>
+            </div>
+        </div>
+        
+        <div class="github-card rounded-lg p-4">
+            <div class="flex items-center justify-between">
+            <div>
+                <p class="text-sm text-muted">Current Year</p>
+                <p class="text-2xl font-semibold">2025</p>
+            </div>
+            <i class="fas fa-calendar text-muted"></i>
+            </div>
+        </div>
+        
+        <div class="github-card rounded-lg p-4">
+            <div class="flex items-center justify-between">
+            <div>
+                <p class="text-sm text-muted">Teams</p>
+                <p class="text-2xl font-semibold">20</p>
+            </div>
+            <i class="fas fa-shield-alt text-muted"></i>
+            </div>
+        </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="github-card rounded-lg p-6 mb-8">
+        <h2 class="text-lg font-semibold mb-4 flex items-center">
+            <i class="fas fa-filter mr-2 text-muted"></i>
+            Filters
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+            <label class="block text-sm font-medium text-muted mb-2">Team</label>
+            <select id="teamFilter" class="w-full github-input rounded-md px-3 py-2 text-sm">
+            </select>
+            </div>
+
+            <div>
+            <label class="block text-sm font-medium text-muted mb-2">Year</label>
+            <select id="yearFilter" class="w-full github-input rounded-md px-3 py-2 text-sm">
+            </select>
+            </div>
+
+            <div>
+            <label class="block text-sm font-medium text-muted mb-2">Type</label>
+            <select id="typeFilter" class="w-full github-input rounded-md px-3 py-2 text-sm">
+                <option value="all">All Types</option>
+                <option value="€">Paid Transfer</option>
+                <option value="Free">Free Transfer</option>
+                <option value="Loan">Loan</option>
+            </select>
+            </div>
+
+            <div class="flex items-end">
+            <button id="clearFilter" class="w-full github-button rounded-md px-4 py-2 text-sm font-medium">
+                <i class="fas fa-refresh mr-2"></i>
+                Reset
+            </button>
+            </div>
+        </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="text-center py-12">
+        <div class="github-card rounded-lg p-8 inline-block">
+            <i class="fas fa-spinner fa-spin text-2xl text-muted mb-3"></i>
+            <p class="text-muted">Loading transfers...</p>
+        </div>
+        </div>
+
+        <!-- Transfer List -->
+        <div id="transfer-list" class="space-y-4">
+        </div>
+
+        <!-- No Results -->
+        <div id="no-results" class="text-center py-12 hidden">
+        <div class="github-card rounded-lg p-8">
+            <i class="fas fa-search text-4xl text-muted mb-4"></i>
+            <h3 class="text-lg font-semibold mb-2">No transfers found or</h3>
+            <p class="text-muted">API token has expired for today try tomorrow</p>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

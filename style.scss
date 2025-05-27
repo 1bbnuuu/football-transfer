@@ -1,0 +1,71 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+.github-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.github-card:hover {
+    border-color: #58a6ff;
+}
+
+.github-input {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.github-input:focus {
+    border-color: #58a6ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.github-button {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    transition: all 0.15s ease-in-out;
+}
+
+.github-button:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+}
+
+.github-button-primary {
+    background-color: #238636;
+    border: 1px solid #2ea043;
+    color: #ffffff;
+}
+
+.github-button-primary:hover {
+    background-color: #2ea043;
+}
+
+.github-border {
+    border-color: #21262d;
+}
+
+.text-muted {
+    color: #8b949e;
+}
+
+.text-accent {
+    color: #58a6ff;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
